@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--显示已经编辑完成的部分-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/writeFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已经编辑完成的部分"
+                android:textColor="#000"
+                android:textSize="25sp"/>
+            <!--正在编辑的行中已经编辑完成的部分-->
+            <TextView
+                android:layout_below="@id/writeFinish"
+                android:id="@+id/writingLineFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:maxLines="1"
+                android:textSize="25sp"
+                android:text="正在编辑的行中已经编辑完成的部分"
+                android:background="@null"/>
+            <!--正在编辑的行中正在编辑的部分-->
+            <EditText
+                android:id="@+id/writingLine"
+                android:layout_toRightOf="@id/writingLineFinish"
+                android:layout_below="@id/writeFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="#000"
+                android:text="正在编辑的行中正在编辑的部分"
+                android:textSize="25sp"/>
+            <!--正在编辑的行-->
+            <EditText
+                android:id="@+id/writing"
+                android:layout_below="@id/writingLineFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="#000"
+                android:text="正在编辑的行"
+                android:textSize="25sp"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
